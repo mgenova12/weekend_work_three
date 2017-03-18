@@ -3,7 +3,17 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
+  
+  m_sorted = mutation.split("")
 
+  count = 0 
+  m_sorted.each do |letter| 
+    if base_word.include?(letter)
+      count+=1 
+    end
+  end
+
+  p count == mutation.size 
 end
 
 # Driver code - don't touch anything below this line.
